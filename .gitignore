@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded datasets and trained weights
+data/
+*.pt
+*.pth
+*.ckpt
+
+# Generated training outputs
+results/history.csv
+results/metrics.json
+
+# Editors and operating system
+.DS_Store
+.idea/
+.vscode/
+

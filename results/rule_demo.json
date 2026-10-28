@@ -1,0 +1,206 @@
+{
+  "cat": {
+    "status": "recognized",
+    "prediction": "cat",
+    "scores": {
+      "cat": 0.85,
+      "dog": 0.0,
+      "deer": 0.0,
+      "horse": 0.0
+    },
+    "facts": [
+      "candidate_cat",
+      "cat",
+      "center_bright",
+      "horizontal_body",
+      "low_edge",
+      "smooth_texture"
+    ],
+    "trace": [
+      {
+        "rule": "R1",
+        "if": [
+          "horizontal_body",
+          "smooth_texture"
+        ],
+        "then": "candidate_cat"
+      },
+      {
+        "rule": "R5",
+        "if": [
+          "candidate_cat",
+          "center_bright"
+        ],
+        "then": "cat"
+      }
+    ],
+    "statistics": {
+      "red": 0.43153244256973267,
+      "green": 0.43443819880485535,
+      "blue": 0.4093031883239746,
+      "edge": 0.06076633557677269,
+      "texture": 0.14570248126983643,
+      "center_contrast": 0.06577584147453308,
+      "horizontal_ratio": 1.2796574831008911
+    }
+  },
+  "dog": {
+    "status": "recognized",
+    "prediction": "dog",
+    "scores": {
+      "cat": 0.68,
+      "dog": 0.82,
+      "deer": 0.0,
+      "horse": 0.0
+    },
+    "facts": [
+      "brown_dominant",
+      "candidate_dog",
+      "cat",
+      "center_bright",
+      "dog",
+      "low_edge",
+      "slender_shape",
+      "smooth_texture",
+      "warm_color"
+    ],
+    "trace": [
+      {
+        "rule": "R2",
+        "if": [
+          "slender_shape",
+          "warm_color"
+        ],
+        "then": "candidate_dog"
+      },
+      {
+        "rule": "R6",
+        "if": [
+          "candidate_dog",
+          "center_bright"
+        ],
+        "then": "dog"
+      },
+      {
+        "rule": "R9",
+        "if": [
+          "center_bright",
+          "smooth_texture",
+          "warm_color"
+        ],
+        "then": "cat"
+      }
+    ],
+    "statistics": {
+      "red": 0.41670405864715576,
+      "green": 0.37155812978744507,
+      "blue": 0.3035079836845398,
+      "edge": 0.055008552968502045,
+      "texture": 0.19715560972690582,
+      "center_contrast": 0.2417086362838745,
+      "horizontal_ratio": 0.9489433765411377
+    }
+  },
+  "deer": {
+    "status": "recognized",
+    "prediction": "deer",
+    "scores": {
+      "cat": 0.0,
+      "dog": 0.0,
+      "deer": 0.88,
+      "horse": 0.0
+    },
+    "facts": [
+      "blue_background",
+      "candidate_cat",
+      "candidate_deer",
+      "cool_color",
+      "deer",
+      "horizontal_body",
+      "low_center_contrast",
+      "low_edge",
+      "smooth_texture"
+    ],
+    "trace": [
+      {
+        "rule": "R1",
+        "if": [
+          "horizontal_body",
+          "smooth_texture"
+        ],
+        "then": "candidate_cat"
+      },
+      {
+        "rule": "R3",
+        "if": [
+          "blue_background",
+          "low_center_contrast"
+        ],
+        "then": "candidate_deer"
+      },
+      {
+        "rule": "R7",
+        "if": [
+          "candidate_deer",
+          "smooth_texture"
+        ],
+        "then": "deer"
+      }
+    ],
+    "statistics": {
+      "red": 0.2034696787595749,
+      "green": 0.31139612197875977,
+      "blue": 0.4241575002670288,
+      "edge": 0.022514423355460167,
+      "texture": 0.05642477050423622,
+      "center_contrast": 0.007228732109069824,
+      "horizontal_ratio": 1.0974586009979248
+    }
+  },
+  "horse": {
+    "status": "recognized",
+    "prediction": "horse",
+    "scores": {
+      "cat": 0.0,
+      "dog": 0.0,
+      "deer": 0.0,
+      "horse": 0.88
+    },
+    "facts": [
+      "candidate_horse",
+      "center_bright",
+      "horizontal_body",
+      "horse",
+      "low_edge",
+      "rough_texture",
+      "warm_color"
+    ],
+    "trace": [
+      {
+        "rule": "R4",
+        "if": [
+          "horizontal_body",
+          "rough_texture"
+        ],
+        "then": "candidate_horse"
+      },
+      {
+        "rule": "R8",
+        "if": [
+          "candidate_horse",
+          "center_bright"
+        ],
+        "then": "horse"
+      }
+    ],
+    "statistics": {
+      "red": 0.30020204186439514,
+      "green": 0.2882860600948334,
+      "blue": 0.2751895785331726,
+      "edge": 0.08873142302036285,
+      "texture": 0.283130943775177,
+      "center_contrast": 0.3947671949863434,
+      "horizontal_ratio": 1.3550413846969604
+    }
+  }
+}
